@@ -1,108 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Karla:wght@800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Karla:wght@800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
 
+:root {
+  --text: #0e0024;
+  --background: #f9f5ff;
+  --primary: #6317fd;
+  --secondary: #fe7188;
+  --accent: #fd8e3f;
+  --gradient_h: linear-gradient(270deg, #6317fd 0%, #fe7188 100%);
 
-html{
-    scroll-behavior: smooth;
-font-family: 'Poppins Sans', sans-serif;
-color: #0e0024;
-background-color: #f9f5ff;
+  --text_n: #e9dbff;
+  --background_n: #04000a;
+  --primary_n: #4f02e8;
+  --secondary_n: #8e0118;
+  --accent_n: #c05102;
 }
-/* menu burger avec slide sur le coté*/
-.menu {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: -250px;
-    background-color: #e8e8e8;
-    padding-top: 60px;
-    transition: left 0.5s ease;
-  }
-  
-  .menu a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .menu a:hover {
-    color: #111;
-  }
-  
-  .menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .menu.active {
-    left: 0;
-  }
-  
 
-  .menu .close {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-  }
-  
+html {
+  scroll-behavior: smooth;
+  font-family: "Poppins Sans", sans-serif;
+  background-color: var(--background);
+}
 
-  .burger-icon span {
-    display: block;
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-  }
+header {
+  display: flex;
+  width: 1920px;
+  padding: 23px 59px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  background-image: var(--gradient_h);
+}
 
-  .burger-icon {
-    position: absolute;
-    top: 22px;
-    right: 25px;
-    display: inline-block;
-    cursor: pointer;
-  }
+header h1 {
+  width: 278px;
+  height: 83px;
+  color: var(--background);
+  text-align: center;
+  font-family: "Teko", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
 
-/*header et tout*/
-  header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.6s;
-    z-index: 1;
-    background-color:#6317FD ;
-  }
-  
-    header h1{
-        position: relative;
-        font-weight: 700;
-        color: #F9F5FF;
-        text-decoration: none;
-        font-size: 2em;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        transition: 0.6s;
-    }
+header button {
+  display: flex;
+  padding: 15px 13px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 28px;
+  background: var(--text);
+  color: var(--background);
 
-    /*premier block*/
+  text-align: center;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
 
-    .pr_block{
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 20px;
-        background-color: #6317FD;
-    }
+.section_1 {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 5%;
+  color: var(--text);
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.72px;
+  width: 100%;
+  margin: 0;
+}
+
+h2 {
+  color: #fd8e3f;
+  font-family: Teko;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  margin: 0;
+  margin-top: 24px;
+}
+
+.img_1 {
+  width: fit-content;
+}
+
+.round {
+  width: 50%;
+  height: 100%;
+  border-radius: 74px;
+}
