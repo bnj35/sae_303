@@ -8,6 +8,7 @@
   --secondary: #fe7188;
   --accent: #fd8e3f;
   --gradient_h: linear-gradient(270deg, #6317fd 0%, #fe7188 100%);
+  --gradient_v: linear-gradient(180deg, #fe7188 0%, #6317fd 100%);
 
   --text_n: #e9dbff;
   --background_n: #04000a;
@@ -23,22 +24,22 @@ html {
 }
 
 header {
-  display: flex;
-  width: 1920px;
-  padding: 23px 59px;
+  display: inline-flexbox;
+  position: relative;
+  width: 100%;
+  padding: 2% 2%;
   flex-direction: row;
   align-items: flex-start;
-  gap: 10px;
   background-image: var(--gradient_h);
 }
 
 header h1 {
-  width: 278px;
-  height: 83px;
+  width: 100%;
+  height: 100%;
   color: var(--background);
   text-align: center;
   font-family: "Teko", sans-serif;
-  font-size: 64px;
+  font-size: 4em;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -46,17 +47,16 @@ header h1 {
 
 header button {
   display: flex;
-  padding: 15px 13px;
+  padding: 0.8em 0.7em;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   border-radius: 28px;
   background: var(--text);
   color: var(--background);
 
   text-align: center;
   font-family: Poppins;
-  font-size: 24px;
+  font-size: 1.2em;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -90,11 +90,21 @@ h2 {
 }
 
 .img_1 {
-  width: fit-content;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .round {
   width: 50%;
   height: 100%;
   border-radius: 74px;
+  margin: 4%;
+}
+
+.section_2 {
+  width: 1982px;
+  height: 778px;
+  flex-shrink: 0;
+  background-image: var(--gradient_v);
 }
