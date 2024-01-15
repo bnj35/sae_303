@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/admistyle.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css"
+    />
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+    <title>SAE_303</title>
+    <style>
+      body {
+        visibility: hidden;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!--header-->
+
+    <header>
+      <div id="head">
+        <button id="mode">colormode</button>
+        <h1>SAE 303</h1>
+        <div class="button_container" id="toggle">
+          <span class="top"></span>
+          <span class="middle"></span>
+          <span class="bottom"></span>
+        </div>
+
+        <div class="overlay" id="overlay">
+          <nav class="overlay-menu">
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="#">Hommes ou Femmes ?</a></li>
+              <li><a href="#">d'où viennent-ils</a></li>
+              <li><a href="#">Pourquoi ?</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!--première partie-->
+
+    <div class="container">
+      <div class="section_1">
+        <h2>Taux d'admissions par filière</h2>
+        <div class="butcam">
+          <button id="data1Button">2020</button>
+          <button id="data2Button">2021</button>
+          <button id="data3Button">2022</button>
+        </div>
+        <div class="contenu">
+          <div id="camembert"></div>
+          <div id="legend"></div>
+        </div>
+      </div>
+    </div>
+
+    <!--deuxième partie-->
+
+    <div class="blurball1"></div>
+    <div class="blurball2"></div>
+
+    <footer>
+      <h3>Alexandre - Auger</h3>
+      <a href="#"><h3>Haut de page ↑</h3></a>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script defer src="./js/admi.js" type="module"></script>
+  </body>
+</html>
