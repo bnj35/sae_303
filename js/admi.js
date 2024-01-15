@@ -112,7 +112,7 @@ function update(data) {
     .attr("fill", function (d) {
       return color(d.data[0]);
     })
-    .attr("stroke", "white")
+    .attr("stroke", "var(--background)")
     .style("stroke-width", "2px")
     .style("opacity", 1);
 }

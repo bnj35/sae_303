@@ -24,7 +24,14 @@
   }
 }
 
+:root::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
   --text: #0e0024;
   --background: #f9f5ff;
   --primary: #6317fd;

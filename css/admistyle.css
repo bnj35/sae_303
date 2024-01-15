@@ -17,7 +17,14 @@
   }
 }
 
+:root::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
   --text: #0e0024;
   --background: #f9f5ff;
   --primary: #6317fd;
@@ -75,6 +82,7 @@ header h1 {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  margin-right: 3.5em;
 }
 
 header button {
