@@ -79,10 +79,14 @@ const data2 = { Général: mbacg2, Techno: mbact2, Pro: mbacp2 };
 const data3 = { Général: mbacg3, Techno: mbact3, Pro: mbacp3 };
 
 // set the color scale
+const primarycolor = "var(--primary)";
+const secondarycolor = "var(--secondary)";
+const accentcolor = "var(--accent)";
+
 const color = d3
   .scaleOrdinal()
   .domain(["Général", "Techno", "Pro"])
-  .range(d3.schemeDark2);
+  .range([primarycolor, secondarycolor, accentcolor]);
 
 // A function that create / update the plot for a given variable:
 function update(data) {

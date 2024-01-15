@@ -1,7 +1,14 @@
 /*import et root+html*/
-
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Karla:wght@800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
+
+@media screen and (max-width: 800px) {
+  * {
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0;
+  }
+}
 
 @keyframes moveInLeft {
   0% {
@@ -75,6 +82,7 @@ header h1 {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  margin-right: 3.5em;
 }
 
 header button {
@@ -130,7 +138,7 @@ header button:hover {
   background: var(--text);
 }
 .button_container span {
-  box-shadow: 0px 0px 5px 0px var(--accent);
+  box-shadow: 0px 0px 5px 0px var(--primary);
   background: var(--background);
   height: 5px;
   width: 120%;
@@ -253,6 +261,7 @@ header button:hover {
   align-items: center;
   justify-content: space-around;
   padding: 5%;
+  flex-wrap: nowrap;
 }
 
 .section_1 {
@@ -303,6 +312,7 @@ header button:hover {
   justify-content: space-around;
   background-image: var(--gradient_v);
   padding: 8%;
+  flex-wrap: nowrap;
 }
 
 .title {
@@ -355,12 +365,15 @@ header button:hover {
   gap: 50px;
 }
 
+/*troisième partie*/
+
 .section_3 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   padding: 5%;
+  flex-wrap: nowrap;
 }
 
 .section_3 h2 {

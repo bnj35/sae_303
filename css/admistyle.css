@@ -279,7 +279,7 @@ header button:hover {
   align-items: center;
   border-radius: 28px;
   border: none;
-  background: var(--text);
+  background: var(--accent);
   color: var(--background);
   margin-left: 2em;
   cursor: pointer;
@@ -295,6 +295,8 @@ header button:hover {
 .butcam button:hover {
   scale: 1.1;
   transition: ease-in-out 0.3s;
+  background-color: var(--text);
+  color: var(--background);
 }
 .section_1 h2 {
   color: var(--secondary);
@@ -320,12 +322,12 @@ footer {
   display: flex;
   flex-direction: row;
   gap: 78%;
-  background-image: var(--gradient_h);
+  background-image: var(--background);
   padding: 1%;
 }
 
 footer h3 {
-  color: var(--background);
+  color: var(--text);
   font-family: Teko;
   font-size: 1.7em;
   font-style: normal;
@@ -367,4 +369,15 @@ a {
   overflow: hidden;
   background: var(--primary);
   filter: blur(100px);
+}
+
+/*deuxième partie*/
+
+.section_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-image: var(--gradient_v);
+  padding: 8%;
 }
