@@ -388,6 +388,11 @@ a {
   justify-content: space-around;
   background-image: var(--gradient_v);
   padding: 8%;
+  z-index: 1;
+}
+
+#table {
+  z-index: 1;
 }
 
 .toolTip {
@@ -404,3 +409,4 @@ a {
   pointer-events: none;
   opacity: 0.9;
 }
+

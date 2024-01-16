@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (theme) document.documentElement.setAttribute("data-theme", theme);
 });
 
+//menu
+
 var toggle = document.getElementById("toggle");
 
 toggle.addEventListener("click", function () {
@@ -34,4 +36,7 @@ toggle.addEventListener("click", function () {
 
   var overlay = document.getElementById("overlay");
   overlay.classList.toggle("open");
+
+  var tab = document.getElementById("table");
+  tab.classList.toggle("active");
 });

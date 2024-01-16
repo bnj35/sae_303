@@ -296,7 +296,8 @@ new gridjs.Grid({
       "font-family": "Poppins",
       color: "var(--text)",
       "background-color": "var(--background)",
-      "z-index": "0",
+      position: "relative",
+      "z-index": "1",
     },
   },
   language: {
