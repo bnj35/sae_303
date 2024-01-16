@@ -73,6 +73,8 @@ const svg = d3
   .append("g")
   .attr("transform", `translate(${width / 2}, ${height / 2})`);
 
+var div = d3.select("body").append("div").attr("class", "toolTip");
+
 // create 2 data_set
 const data1 = { Général: mbacg, Techno: mbact, Pro: mbacp };
 const data2 = { Général: mbacg2, Techno: mbact2, Pro: mbacp2 };
@@ -98,16 +100,23 @@ function update(data) {
     })
     .sort(function (a, b) {
       return d3.ascending(a.key, b.key);
-    }); // This make sure that group order remains the same in the pie chart
+    });
+
   const data_ready = pie(Object.entries(data));
 
-  // map to data
-  const u = svg.selectAll("path").data(data_ready);
+  // Update the pie chart paths
+  const paths = svg.selectAll("path").data(data_ready);
 
-  // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
-  u.join("path")
-    .transition()
-    .duration(1000)
+  // Handle the exit selection
+  paths.exit().remove();
+
+  // Handle the enter and update selections
+  paths
+    .enter()
+    .append("path")
+    .merge(paths)
+    .transition() // Apply a transition
+    .duration(1000) // Duration of the transition
     .attr("d", d3.arc().innerRadius(0).outerRadius(radius))
     .attr("fill", function (d) {
       return color(d.data[0]);
@@ -115,6 +124,57 @@ function update(data) {
     .attr("stroke", "var(--background)")
     .style("stroke-width", "2px")
     .style("opacity", 1);
+
+  // Re-select all paths to apply the tooltip functionality
+  svg
+    .selectAll("path")
+    .on("mousemove", function (event, d) {
+      // Get the bounding rectangle of the SVG container
+      const svgRect = svg.node().getBoundingClientRect();
+
+      // Calculate the position of the tooltip based on event coordinates and the SVG position
+      const tooltipX = event.pageX;
+      const tooltipY = event.pageY;
+
+      // Adjust the position of the tooltip so it's not directly under the mouse cursor
+      const offsetX = 20; // horizontal offset
+      const offsetY = -25; // vertical offset
+
+      div.style("left", tooltipX + offsetX + "px");
+      div.style("top", tooltipY + offsetY + "px");
+      div.style("display", "inline-block");
+      div.html(d.data[0] + "<br>" + d.data[1] + pourcentage);
+    })
+    .on("mouseout", function () {
+      div.style("display", "none");
+    });
+
+  // Remove previous text elements
+  svg.selectAll("text").remove();
+
+  // Define labelArc
+  var labelArc = d3
+    .arc()
+    .outerRadius(radius - 40)
+    .innerRadius(radius - 40);
+
+  // Add the text labels
+
+  const pourcentage = " %";
+  /* const text = svg
+    .selectAll("text")
+    .data(data_ready)
+    .enter()
+    .append("text")
+    .attr("transform", function (d) {
+      return "translate(" + labelArc.centroid(d) + ")";
+    })
+    .attr("dy", "0.35em")
+    .style("text-anchor", "middle")
+    .style("font-size", "12px")
+    .text(function (d) {
+      return d.data[0];
+    });*/
 }
 
 // Initialize the plot with the first dataset

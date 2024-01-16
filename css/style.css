@@ -42,13 +42,13 @@
 }
 
 :root[data-theme="dark"] {
-  --text: #ffe3e1;
-  --background: #1e0100;
-  --primary: #fd6868;
-  --secondary: #a77f02;
-  --accent: #edfd1d;
-  --gradient_h: linear-gradient(270deg, #edfd1d 0%, #fd6868 100%);
-  --gradient_v: linear-gradient(180deg, #edfd1d 0%, #fd6868 100%);
+  --text: #e6eefe;
+  --background: #020c26;
+  --primary: #7aa0f7;
+  --secondary: #a5096e;
+  --accent: #f33444;
+  --gradient_h: linear-gradient(270deg, #7aa0f7 0%, #a5096e 100%);
+  --gradient_v: linear-gradient(180deg, #a5096e 0%, #7aa0f7 100%);
 }
 
 html {

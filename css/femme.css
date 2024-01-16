@@ -1,7 +1,14 @@
 /*import et root+html*/
-
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Karla:wght@800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
+
+@media screen and (max-width: 800px) {
+  * {
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0;
+  }
+}
 
 @keyframes moveInLeft {
   0% {
@@ -257,9 +264,11 @@ header button:hover {
 
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  padding: 5%;
+  flex-wrap: nowrap;
 }
 
 .section_1 {
@@ -269,45 +278,62 @@ header button:hover {
   font-family: Poppins;
   font-size: 1.5em;
   width: 100%;
-  margin: 3% 1% 3% 1%;
+  margin: 10% 5% 10% 5%;
 }
 
-.butcam {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  padding: 5%;
-}
-
-.butcam button {
-  display: flex;
-  padding: 0.8em 0.7em;
-  justify-content: center;
-  align-items: center;
-  border-radius: 28px;
-  border: none;
-  background: var(--accent);
-  color: var(--background);
-  margin-left: 2em;
-  cursor: pointer;
-
-  text-align: center;
-  font-family: Poppins;
-  font-size: 1.2em;
+.container h2 {
+  color: var(--secondary);
+  font-family: Teko;
+  font-size: 2em;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  letter-spacing: 2%;
+  margin: 0 0 0 5%;
+  margin-right: 2em;
 }
 
-.butcam button:hover {
-  scale: 1.1;
-  transition: ease-in-out 0.3s;
-  background-color: var(--text);
-  color: var(--background);
+.container h3 {
+  color: var(--text);
+  font-family: Poppins;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0 0 0 5%;
+  margin-right: 2em;
 }
-.section_1 h2 {
-  color: var(--secondary);
+
+.canva {
+  display: flex;
+  flex-direction: row;
+  border: red solid 1px;
+  width: 70em;
+  height: 30em;
+  border-radius: 20px;
+}
+
+.femme,
+.homme {
+  border: red solid 1px;
+  width: 50%;
+  height: 100%;
+}
+
+/*deuxième partie*/
+
+.section_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-image: var(--gradient_v);
+  padding: 8%;
+  flex-wrap: nowrap;
+}
+
+.title {
+  color: var(--background);
   font-family: Teko;
   font-size: 2em;
   font-style: normal;
@@ -317,25 +343,98 @@ header button:hover {
   margin: 0 0 0 5%;
 }
 
-.contenu {
+.pres {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.section_2 h3 {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.6px;
+}
+
+.ellipse {
+  width: 17em;
+  height: 17em;
+}
+
+.cercle {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.row {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+/*troisième partie*/
+
+.section_3 {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-left: 7%;
+  justify-content: space-around;
+  padding: 5%;
+  flex-wrap: nowrap;
+}
+
+.section_3 h2 {
+  color: var(--primary);
+  font-family: Teko;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2%;
+  margin: 1% 0 0 0;
+  text-align: center;
+}
+
+.section_3 p {
+  width: 70%;
+  color: var(--text);
+  font-family: poppins;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2%;
+  margin: 0;
+  text-align: center;
+}
+
+.section_3 img {
+  width: 70%;
+  height: 85%;
+  border-radius: 30px;
+  align-items: center;
 }
 
 footer {
   display: flex;
   flex-direction: row;
   gap: 78%;
-  background-image: var(--background);
+  background-image: var(--gradient_h);
   padding: 1%;
 }
 
 footer h3 {
-  color: var(--text);
+  color: var(--background);
   font-family: Teko;
   font-size: 1.7em;
   font-style: normal;
@@ -379,28 +478,28 @@ a {
   filter: blur(100px);
 }
 
-/*deuxième partie*/
-
-.section_2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  background-image: var(--gradient_v);
-  padding: 8%;
+.blurball3 {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  top: 200%;
+  width: 600px;
+  height: 600px;
+  border-radius: 600px;
+  overflow: hidden;
+  background: var(--secondary);
+  filter: blur(70px);
 }
 
-.toolTip {
+.blurball4 {
   position: absolute;
-  text-align: center;
-  width: auto;
-  height: auto;
-  padding: 1%;
-  font: 1em sans-serif;
-  background: var(--background);
-  color: var(--text);
-  border: none;
-  border-radius: 8px;
-  pointer-events: none;
-  opacity: 0.9;
+  right: 0;
+  z-index: -1;
+  top: 280%;
+  width: 500px;
+  height: 500px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: var(--secondary);
+  filter: blur(100px);
 }
