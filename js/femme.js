@@ -37,3 +37,15 @@ toggle.addEventListener("click", function () {
 });
 
 // hybride
+
+//calcutate average of women and men accepted in 2022
+let sumF2022 = 0;
+let sumH2022 = 0;
+for (let i = 0; i < data2022.length; i++) {
+  sumF2022 += data2022[i].pct_f;
+  sumH2022 += 100 - data2022[i].pct_f;
+}
+sumF2022 = Math.round(sumF2022 / data2022.length / 10);
+sumH2022 = Math.round(sumH2022 / data2022.length / 10);
+console.log(sumF2022);
+console.log(sumH2022);

@@ -218,3 +218,110 @@ legendSvg
   .attr("y", (d, i) => i * 20 + 10)
   .text((d) => d)
   .style("alignment-baseline", "middle");
+
+//table
+
+let gridData = [];
+
+for (let i = 0; i < data2022.length; i++) {
+  let g_ea_lib_vx = data2022[i]["g_ea_lib_vx"];
+  let part_acces_gen =
+    data2022[i]["part_acces_gen"] != null
+      ? data2022[i]["part_acces_gen"].toString() + "%"
+      : "0%";
+  let part_acces_tec =
+    data2022[i]["part_acces_tec"] != null
+      ? data2022[i]["part_acces_tec"].toString() + "%"
+      : "0%";
+  let part_acces_pro =
+    data2022[i]["part_acces_pro"] != null
+      ? data2022[i]["part_acces_pro"].toString() + "%"
+      : "0%";
+  let session = data2022[i]["session"];
+
+  gridData.push([
+    g_ea_lib_vx,
+    part_acces_gen,
+    part_acces_tec,
+    part_acces_pro,
+    session,
+  ]);
+}
+
+let allData = data2020.concat(data2021);
+
+for (let i = 0; i < allData.length; i++) {
+  let g_ea_lib_vx = allData[i]["g_ea_lib_vx"];
+  let part_acces_gen =
+    allData[i]["taux_adm_psup_gen"] != null
+      ? allData[i]["taux_adm_psup_gen"].toString() + "%"
+      : "0%";
+  let part_acces_tec =
+    allData[i]["taux_adm_psup_techno"] != null
+      ? allData[i]["taux_adm_psup_techno"].toString() + "%"
+      : "0%";
+  let part_acces_pro =
+    allData[i]["taux_adm_psup_pro"] != null
+      ? allData[i]["taux_adm_psup_pro"].toString() + "%"
+      : "0%";
+  let session = allData[i]["session"];
+
+  gridData.push([
+    g_ea_lib_vx,
+    part_acces_gen,
+    part_acces_tec,
+    part_acces_pro,
+    session,
+  ]);
+}
+
+console.log(gridData);
+
+new gridjs.Grid({
+  columns: [
+    "IUT",
+    "Part de bac Général",
+    "Part de bac Technologique",
+    "Part de bac Profesionnel",
+    "Année",
+  ],
+  data: gridData,
+  style: {
+    td: {
+      border: "1px solid #ccc",
+    },
+    table: {
+      "font-size": "15px",
+      "text-align": "center",
+      "font-family": "Poppins",
+      color: "var(--text)",
+      "background-color": "var(--background)",
+      "z-index": "0",
+    },
+  },
+  language: {
+    search: {
+      placeholder: "Rechercher...",
+    },
+    sort: {
+      sortAsc: "Sort column ascending",
+      sortDesc: "Sort column descending",
+    },
+    pagination: {
+      previous: "Précédent",
+      next: "Suivant",
+      showing: "Affichage des résultats",
+      of: "sur",
+      to: "à",
+      results: "résultats",
+    },
+    loading: "Chargement.",
+    noRecordsFound: "Aucun résultats trouvé",
+    error: "Une erreur est apparu lors de la récupération des données",
+  },
+  search: true,
+  pagination: {
+    limit: 8,
+  },
+  sort: true,
+}).render(document.getElementById("table"));

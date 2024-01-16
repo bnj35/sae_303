@@ -3,13 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./css/admistyle.css" />
+    <link rel="stylesheet" href="./css/menstyle.css" />
     <link rel="shortcut icon" href="img/favicon.ico" type="icon" />
-    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-    <link
-      href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
-      rel="stylesheet"
-    />
     <title>SAE_303</title>
     <style>
       body {
@@ -35,8 +30,8 @@
           <nav class="overlay-menu">
             <ul>
               <li><a href="index.html">Accueil</a></li>
+              <li><a href="admissions.html">Admissions par filière</a></li>
               <li><a href="femme.html">Hommes ou Femmes ?</a></li>
-              <li><a href="#">d'où viennent-ils</a></li>
               <li><a href="#">Pourquoi ?</a></li>
             </ul>
           </nav>
@@ -44,29 +39,34 @@
       </div>
     </header>
 
-    <!--première partie-->
-
-    <div class="container">
-      <div class="section_1">
-        <h2>Taux d'admissions par filière</h2>
-        <div class="butcam">
-          <button id="data1Button">2020</button>
-          <button id="data2Button">2021</button>
-          <button id="data3Button">2022</button>
-        </div>
-        <div class="contenu">
-          <div id="camembert"></div>
-          <div id="legend"></div>
-        </div>
+    <div class="section_2">
+      <div class="title">
+        <h2>Proportions des mentions dans les BUT</h2>
+        <h3>
+          blabskanfbeoizhfon bhjei bijek nezi jijo ezfoiuhzo jéuh ifnihckahiu
+          hoirj ihkn fizh i
+        </h3>
+      </div>
+      <div class="video">
+        <video width="600" border-radius="20" controls autoplay loop>
+          <source src="./img/mp.mp4" type="video/mp4" />
+        </video>
       </div>
     </div>
 
-    <!--deuxième partie-->
+    <!--troisième partie-->
 
-    <div class="section_2"><div id="table"></div></div>
+    <div class="section_3">
+      <img src="./img/ecole-esp.jpg" alt="jsp" />
 
-    <div class="blurball1"></div>
-    <div class="blurball2"></div>
+      <h2>Accessible par Parcoursup</h2>
+      <p>
+        Parcoursup est la plateforme nationale et officielle sur laquelle tu vas
+        faire tes vœux d'orientation pour entrer en études supérieures, après le
+        bac ou lors d'une potentielle réorientation.En 2024, Parcoursup
+        référence plus de 20.000 formations (dont les BUT).
+      </p>
+    </div>
 
     <footer>
       <h3>Alexandre - Auger</h3>
@@ -74,6 +74,5 @@
     </footer>
 
     <script src="./js/script.js"></script>
-    <script defer src="./js/admi.js" type="module"></script>
   </body>
 </html>
