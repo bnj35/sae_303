@@ -279,7 +279,7 @@ header button:hover {
 .section_2 h2 {
   color: var(--background);
   font-family: Teko;
-  font-size: 2em;
+  font-size: 1.8em;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -290,7 +290,6 @@ header button:hover {
 
 .section_2 h3 {
   color: #fff;
-  text-align: center;
   font-family: Poppins;
   font-size: 1em;
   font-style: normal;
@@ -300,7 +299,7 @@ header button:hover {
 }
 
 .video {
-  border-radius: 20px;
+  border-radius: 30px;
   overflow: hidden;
   width: fit-content;
   height: 100%;
@@ -343,8 +342,8 @@ header button:hover {
 }
 
 .section_3 img {
-  width: 70%;
-  height: 85%;
+  width: 50%;
+  height: 20%;
   border-radius: 30px;
   align-items: center;
 }

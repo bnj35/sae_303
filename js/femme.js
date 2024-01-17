@@ -121,6 +121,9 @@ texth.innerHTML= (sumH2022+"0"+" %");
     img.width = 100-1*sumF2022;
     fm.appendChild(img);
   };
+  fm.classList.remove('scale-up-center'); 
+  void fm.offsetWidth; 
+  fm.classList.add('scale-up-center');
   //ça marche
   
   for (let i = 0; i < sumH2022; i++) {
@@ -129,6 +132,9 @@ texth.innerHTML= (sumH2022+"0"+" %");
     img2.width = 100-1*sumH2022;
     hm.appendChild(img2);
   };
+  hm.classList.remove('scale-up-center'); 
+  void hm.offsetWidth; 
+  hm.classList.add('scale-up-center');
   
 });
 
@@ -152,6 +158,9 @@ texth.innerHTML= (sumH2021+"0"+" %");
     img.width = 100-1*sumF2021;
     fm.appendChild(img);
   };
+  fm.classList.remove('scale-up-center'); 
+  void fm.offsetWidth; 
+  fm.classList.add('scale-up-center');
   //ça marche
   
   for (let i = 0; i < sumH2021; i++) {
@@ -160,6 +169,9 @@ texth.innerHTML= (sumH2021+"0"+" %");
     img2.width = 100-1*sumH2021;
     hm.appendChild(img2);
   };
+  hm.classList.remove('scale-up-center'); 
+  void hm.offsetWidth; 
+  hm.classList.add('scale-up-center');
   
 });
 
@@ -183,6 +195,9 @@ texth.innerHTML= (sumH2020+"0"+" %");
     img.width = 100-1*sumF2020;
     fm.appendChild(img);
   };
+  fm.classList.remove('scale-up-center'); 
+  void fm.offsetWidth; 
+  fm.classList.add('scale-up-center');
   //ça marche
   
   for (let i = 0; i < sumH2020; i++) {
@@ -191,6 +206,8 @@ texth.innerHTML= (sumH2020+"0"+" %");
     img2.width = 100-1*sumH2020;
     hm.appendChild(img2);
   };
+  hm.classList.remove('scale-up-center'); 
+  void hm.offsetWidth; 
+  hm.classList.add('scale-up-center');
   
 });
-
