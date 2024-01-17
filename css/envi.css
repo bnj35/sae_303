@@ -2,27 +2,71 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Karla:wght@800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
 
-@media screen and (max-width: 1023px) {
+@media only screen and (max-width: 600px){
   * {
     flex-wrap: wrap;
-    flex-direction: column;
-    margin: 0;
-height: auto;
-text-align: center;
+    justify-content: center;
+    font-size: 0.8em;
+    
+  }
+  .container {
+    display: flex;
+    flex-direction: column !important;
+    width:auto;
+
   }
 
-  .container{
-    flex-direction: column-reverse;
+  .section_2 {
+    display: flex;
+    flex-direction: column !important;
+    width:auto;
+    font-size: 1em;
   }
+
+  .section_1_1 a{
+    text-decoration:underline !important;
+      }
+  
+  .section_1 {
+margin-left: 0% !important;
+  }
+
+  .section_1 h2{
+    width: 80%!important;
+    margin-left: 13% !important;
+      }
 
   .section_1 p{
-        width: 85%;
-  }
+    margin-left: 15% !important;
+      }
 
-  .button_container{
-    top:3.5%;
-  }
-  }
+
+    .blurball1,.blurball2,.blurball3,.blurball4{
+      display: none !important;
+    }
+
+    #head{
+      flex-wrap: nowrap;
+      margin: 1em 1em 2em 1em ;
+    }
+    header h1{
+      margin: 0 2em 0 0 !important;
+    }
+
+    .button_container,.button_container.active{
+      top: 1% !important;
+      right: 3% !important;
+      width:30px !important;
+      height: 15px !important;
+    }
+
+    footer{
+      margin-top: 5%;
+      padding-bottom: 8% !important;
+    }
+  
+}
+  
 
   @media screen and (max-width:767px) {
     * {
@@ -46,6 +90,7 @@ text-align: center;
     }
     }
   
+
 
 
 
@@ -184,7 +229,6 @@ header button:hover {
   background: var(--text);
 }
 .button_container span {
-  box-shadow: 0px 0px 5px 0px var(--primary);
   background: var(--text);
   height: 5px;
   width: 120%;
