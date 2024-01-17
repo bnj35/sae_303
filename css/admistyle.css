@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Karla:wght@800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1024px){
   * {
     flex-wrap: wrap;
     justify-content: center;
@@ -17,25 +17,32 @@
 
   }
 
+  .size{
+    width: 50% !important;
+    height: 50% !important;
+    margin-left: 25% !important;
+  }
+
+  .section_1 {
+margin: 0% !important;  
+  }
+
+  .gridjs-th, .gridjs-td{
+    width: 70% !important;
+    text-align: center;
+  }
+
+  .gridjs-tr{
+    height: 60% !important;
+  }
+
   .section_2 {
     display: flex;
     flex-direction: column;
     width:auto;
     font-size: 1em;
     margin-top: 15%;
-    margin-bottom: 15%;
-
   }
-  .section_3 {
-    display: flex;
-    flex-direction: column;
-    width:auto;
-    margin-top: 15%;
-    margin-bottom: 15%;}
-
-    .blurball1,.blurball2,.blurball3,.blurball4{
-      display: none !important;
-    }
 
     #head{
       flex-wrap: nowrap;
@@ -52,10 +59,15 @@
       height: 15px !important;
     }
 
-    .gridjs, .gridjs-container{
-      width: 50% !important;
-      height: 50% !important;
+    .blurball1,.blurball2,.blurball3,.blurball4{
+      display: none !important;
     }
+
+    #table{
+      width: 100% !important;
+      height: 60% !important;
+    }
+
 
     .contenu{
       margin:0% !important;
@@ -199,7 +211,6 @@ header button:hover {
   background: var(--text);
 }
 .button_container span {
-  box-shadow: 0px 0px 5px 0px var(--primary);
   background: var(--text);
   height: 5px;
   width: 120%;

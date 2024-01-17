@@ -57,9 +57,9 @@ console.log(mbact3);
 console.log(mbacp3);
 
 // set the dimensions and margins of the graph
-const width = 500,
-  height = 500,
-  margin = 40;
+const width = 400,
+  height = 300,
+  margin = 20;
 
 // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
 const radius = Math.min(width, height) / 2 - margin;
@@ -322,7 +322,7 @@ new gridjs.Grid({
   },
   search: true,
   pagination: {
-    limit: 8,
+    limit: 6,
   },
   sort: true,
 }).render(document.getElementById("table"));
